@@ -162,7 +162,7 @@ void SbplSplineMotionPrimitives::generatePrimitivesForAngle(const int startAngle
     if(config.generatePointTurnMotions)
     {
         //point turns are a special case
-        for(int angle = 0; angle < config.numAngles; ++ angle)
+        for(int angle = 0; angle < config.numPointTurnAngles; ++ angle)
         {
             if(angle == startAngle)
                 continue;

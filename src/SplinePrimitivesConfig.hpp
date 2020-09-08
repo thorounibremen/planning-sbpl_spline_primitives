@@ -6,6 +6,8 @@ struct SplinePrimitivesConfig
 {
     double gridSize; //width and height of a grid cell
     int numAngles; //number of discrete start angles angles. A full set of primitives will be generated for each start angle (has to be even)
+
+    int numPointTurnAngles;
     
     /** maximum number of possible end orientations per cell.
      * Has to be <= numAngles/2.
@@ -26,7 +28,7 @@ struct SplinePrimitivesConfig
     bool generateLateralMotions;
     bool generatePointTurnMotions;
     
-    SplinePrimitivesConfig() : gridSize(0.1), numAngles(16), numEndAngles(7),
+    SplinePrimitivesConfig() : gridSize(0.1), numAngles(16), numPointTurnAngles(60), numEndAngles(7),
                                destinationCircleRadius(20), cellSkipFactor(0.3),
                                splineOrder(4), generateForwardMotions(true),
                                generateBackwardMotions(true), generateLateralMotions(true),
